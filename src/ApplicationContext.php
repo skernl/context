@@ -4,12 +4,13 @@ declare(strict_types=1);
 namespace Skernl\Context;
 
 use Psr\Container\ContainerInterface;
+use Skernl\Contract\ApplicationContextInterface;
 
 /**
  * @ApplicationContext
  * @\Skernl\Context\ApplicationContext
  */
-class ApplicationContext
+class ApplicationContext implements ApplicationContextInterface
 {
     /**
      * @var ContainerInterface $container
@@ -21,9 +22,7 @@ class ApplicationContext
      */
     public function __construct(ContainerInterface $container)
     {
-        if (!self::hasContainer()) {
-            self::$container = $container;
-        }
+        self::$container = $container;
     }
 
     /**
