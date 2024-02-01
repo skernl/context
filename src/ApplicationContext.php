@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Skernl\Context;
 
 use Psr\Container\ContainerInterface;
-use Skernl\Contract\ApplicationContextInterface;
+use Skernl\Context\Contract\ApplicationContextInterface;
 
 /**
  * @ApplicationContext
